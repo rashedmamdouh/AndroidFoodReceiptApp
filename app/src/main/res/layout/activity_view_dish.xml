@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_ground"
+    tools:context=".view_dish">
+
+
+    <ImageView
+        android:id="@+id/dish_img"
+        android:layout_width="406dp"
+        android:layout_height="310dp"
+        android:layout_marginTop="4dp"
+        android:contentDescription=""
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+         />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/dish_img">
+
+        <!-- LinearLayout to hold Ingredients and Preparation Methods -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Ingredients Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ingredients"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:textColor="#FF0000"/>
+
+            <!-- Replace the following TextView with your list of ingredients -->
+            <TextView
+                android:id="@+id/ing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/white"/>
+
+            <!-- Preparation Methods Section -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Preparation Methods"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:textColor="#FF0000"/>
+
+            <!-- Replace the following TextView with your list of preparation methods -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginBottom="16dp"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:id="@+id/prep"/>
+
+            <ImageButton
+                android:id="@+id/fav"
+                android:layout_width="162dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="100dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/back_ground"
+                android:contentDescription="add_favourits"
+                android:scaleType="fitXY"
+                android:src="@drawable/fav"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
